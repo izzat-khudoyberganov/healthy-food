@@ -1,4 +1,6 @@
-import './menu.css';
+import ProductList from "../productlist";
+import "./menu.css";
+
 const Menu = () => {
   return (
     <section className="menu">
@@ -11,14 +13,7 @@ const Menu = () => {
           equipment, Skills to manage Customers,{" "}
         </p>
 
-        <div className="products">
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-          <div className="product"></div>
-        </div>
+        <ProductList />
       </div>
     </section>
   );
