@@ -4,6 +4,7 @@
     border-radius: 75px 10px 10px 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    position: relative;
 }
 
 .product__img {
@@ -62,4 +63,11 @@
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+}
+
+.like_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: antiquewhite;
 }
