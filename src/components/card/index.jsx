@@ -1,5 +1,4 @@
 import React, { useContext } from "react";
-import "./style.css";
 import { reducer } from "../../store";
 import {
   ADD_ONE,
@@ -12,6 +11,8 @@ import {
 import { MainContext } from "../../context/mainContext";
 import like from "../../assets/heart.svg";
 import like_red from "../../assets/heart-red.svg";
+import "./style.css";
+import { formatPrice, truncate } from "../../utils/helper";
 
 const Card = ({
   thumbnail,
@@ -23,17 +24,7 @@ const Card = ({
   isContainedCartItems,
   isContainedLikeItems,
 }) => {
-  function truncate(str, max) {
-    return str.length > max ? str.slice(0, max) + "..." : str;
-  }
-
-
-  function formatPrice(price) {
-    return price.toLocaleString("en-US", {
-      style: "currency",
-      currency: "USD",
-    });
-  }
+  
 
   const { addToCart, addToLike, removeFromCart, removeFromLike } = useContext(MainContext);
 

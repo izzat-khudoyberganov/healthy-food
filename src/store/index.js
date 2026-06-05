@@ -45,10 +45,30 @@ export function reducer(state, action) {
       };
       break;
     case ADD_ONE:
-      console.log("add one");
+      return {
+        ...state,
+        cartItems: state.cartItems.map((el) =>
+          el.id == action.payload
+            ? {
+                ...el,
+                quantity: el.quantity + 1,
+              }
+            : el,
+        ),
+      };
       break;
     case REMOVE_ONE:
-      console.log("remove one");
+      return {
+        ...state,
+        cartItems: state.cartItems.map((el) =>
+          el.id == action.payload
+            ? {
+                ...el,
+                quantity: el.quantity - 1,
+              }
+            : el,
+        ),
+      };
       break;
     default:
       console.log("Unknown function type");

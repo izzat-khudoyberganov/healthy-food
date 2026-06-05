@@ -1,5 +1,5 @@
 import { createContext, useReducer } from "react";
-import { ADD_TO_CART, ADD_TO_LIKE, REMOVE_FROM_CART, REMOVE_FROM_LIKE } from "../store/type";
+import { ADD_ONE, ADD_TO_CART, ADD_TO_LIKE, REMOVE_FROM_CART, REMOVE_FROM_LIKE, REMOVE_ONE } from "../store/type";
 import { reducer } from "../store";
 
 export const MainContext = createContext(null);
@@ -28,12 +28,22 @@ function MainContextProvider({ children }) {
     dispatch({type: REMOVE_FROM_LIKE, payload: id})
   }
 
+  function addOne(id) {
+    dispatch({type: ADD_ONE, payload: id})
+  }
+
+  function removeOne(id) {  
+    dispatch({type: REMOVE_ONE, payload: id})
+  }
+
   
   const values = {
     addToCart,
     removeFromCart,
     addToLike,
     removeFromLike,
+    addOne,
+    removeOne,
     cartItems: state.cartItems,
     likeItems: state.likeItems
   }

@@ -4,6 +4,8 @@ import like from "../../assets/heart.svg";
 import { Link } from "react-router-dom";
 import { MainContext } from "../../context/mainContext";
 import "./header.css";
+
+
 const Header = () => {
   const { cartItems, likeItems } = useContext(MainContext);
   return (
