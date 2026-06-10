@@ -42,3 +42,18 @@
     align-items: center;
     gap: 10px;
 }
+
+.btn_groups {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove__btn {
+    padding: 10px 20px;
+    background-color: rgba(220, 120, 11, 1);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
